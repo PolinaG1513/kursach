@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deikstra</title>
+</head>
+<body style="background-color: lightblue; width: 950px; height: 500px; display: block;">
+    <div class="intro">
+        <div class="intro_inner">
+            <h1 class="intro_title" style="margin-bottom: 10px; margin-left: 10px;">Узнайте длину наименьшего пути!</h1>
+        </div>
+    </div>
+    <div class="flex" style="display: flex; justify-content: space-between;">
+        <button onclick="addtoStack" style="padding: 5px 10px; background-color:rgb(240, 243, 168); 
+        color: black; margin-right: 40px; margin-bottom: 10px; margin-left: 15px;">Добавить вершину</button>
+        <button onclick="addtoStackLine" style="padding: 5px 10px; background-color:rgb(240, 243, 168); 
+        color: black; margin-bottom: 10px;">Добавить ребро</button>
+        <p style="margin-left: 10px;">Кратчайшая длина: <output name="result">0</output></p>
+    </div>
+    <canvas id="canvas" style="border: 1px solid gray;"> </canvas>
+    <script src="package.js"></script>
+</body>
+</html>
