@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" type="text/css">
     <title>Deikstra</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.9.4/cytoscape.min.js"></script>
 </head>
-<body style="background-color: lightblue; width: 950px; height: 500px; display: block;">
+<body>
     <div class="intro">
-        <div class="intro_inner">
-            <h1 class="intro_title" style="margin-bottom: 10px; margin-left: 10px;">Узнайте длину наименьшего пути!</h1>
+        <h1 class="intro_title">Узнайте длину наименьшего пути!</h1>
+    </div>
+        <div class="flex">
+            <button type="submit" id="curcle" class ="add_curcle">Добавить вершину</button>
+            <div class="edge_add">
+                <button type="submit" id="line" class="add_line">Добавить ребро</button>
+                <input type="text" id="from-vert" placeholder="From:">
+                <input type="text" id="to-vert" placeholder="To:">
+                <input type="text" id="weight" placeholder="Weight:">
+            </div>
+            <div>
+                <button type="submit" id="create" class="add_line">Найти путь</button>
+                <input type="text" id="from-vert-path" placeholder="From:">
+                <input type="text" id="to-vert-path" placeholder="To:">
+            </div>
+        </div>
+        <div class="get_answer">
+            <div id="cy"></div>
         </div>
     </div>
-    <div class="flex" style="display: flex; justify-content: space-between;">
-        <button onclick="addtoStack" style="padding: 5px 10px; background-color:rgb(240, 243, 168); 
-        color: black; margin-right: 40px; margin-bottom: 10px; margin-left: 15px;">Добавить вершину</button>
-        <button onclick="addtoStackLine" style="padding: 5px 10px; background-color:rgb(240, 243, 168); 
-        color: black; margin-bottom: 10px;">Добавить ребро</button>
-        <p style="margin-left: 10px;">Кратчайшая длина: <output name="result">0</output></p>
-    </div>
-    <canvas id="canvas" style="border: 1px solid gray;"> </canvas>
-    <script src="package.js"></script>
+    <script type="module" src="index.js"></script>
 </body>
 </html>
